@@ -1,0 +1,30 @@
+.botao {
+  display: flex;
+  padding: 16px 32px;
+  border-radius: 3px;
+  background: var(
+    --deg-basic,
+    linear-gradient(90deg, #de4243 0%, #bc1d1d 100%)
+  );
+  box-shadow: 2px 2px 4px 0px rgba(45, 45, 45, 0.15),
+    2px 2px 2px 0px rgba(39, 39, 39, 0.15),
+    2px 2px 0px 0px rgba(134, 134, 134, 0.05);
+  color: var(--cor-a1);
+  font-weight: 500;
+  letter-spacing: 1px;
+  font-family: "Roboto", sans-serif;
+  max-width: max-content;
+  border-radius: 3px;
+  align-items: center;
+  gap: 12px;
+  text-transform: uppercase;
+}
+
+@media (max-width: 800px) {
+  .botao {
+    padding: 12px 24px;
+    gap: 6px;
+    font-size: 1.3rem;
+    line-height: 1.3rem;
+  }
+}

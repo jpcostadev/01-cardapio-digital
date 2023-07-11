@@ -1,0 +1,180 @@
+:root {
+  /* MARGINS E PADDINGS */
+  --t04: 0.4rem;
+  --t08: 0.8rem;
+  --t12: 1.2rem;
+  --t16: 1.6rem;
+  --t18: 1.8rem;
+  --t20: 2rem;
+  --t24: 2.4rem;
+  --t32: 3.2rem;
+  --t36: 3.6rem;
+  --t40: 4rem;
+  --t48: 4.8rem;
+  --t50: 5rem;
+  --t60: 6rem;
+  --t72: 7.2rem;
+  --t80: 8rem;
+  --t120: 12rem;
+  --t160: 16rem;
+  --t200: 20rem;
+
+  /* Tamanhos negativos */
+  --tn04: -0.4rem;
+  --tn08: -0.8rem;
+  --tn12: -1.2rem;
+  --tn16: -1.6rem;
+  --tn18: -1.8rem;
+  --tn20: -2rem;
+  --tn24: -2.4rem;
+  --tn32: -3.2rem;
+  --tn36: -3.6rem;
+  --tn40: -4rem;
+  --tn48: -4.8rem;
+  --tn50: -5rem;
+  --tn60: -6rem;
+  --tn72: -7.2rem;
+  --tn80: -8rem;
+  --tn120: -12rem;
+  --tn160: -16rem;
+  --tn200: -20rem;
+
+  /* FONTES */
+  --f04: 0.4rem;
+  --f08: 0.8rem;
+  --f12: 1.2rem;
+  --f16: 1.6rem;
+  --f18: 1.8rem;
+  --f20: 2rem;
+  --f24: 2.4rem;
+  --f32: 3.2rem;
+  --f36: 3.6rem;
+  --f40: 4rem;
+  --f48: 4.8rem;
+  --f50: 5rem;
+  --f60: 6rem;
+  --f72: 7.2rem;
+  --f80: 8rem;
+  --f120: 12rem;
+  --f160: 16rem;
+  --f200: 20rem;
+}
+
+/* Abaixo de 1200px */
+@media (max-width: 1200px) {
+  :root {
+    /* FONTES */
+    --f04: 0.4rem;
+    --f08: 0.8rem;
+    --f12: 1.2rem;
+    --f16: 1.6rem;
+    --f18: 1.8rem;
+    --f20: 2rem;
+    --f24: 2.4rem;
+    --f32: 3.2rem;
+    --f36: 3.6rem;
+    --f40: 4rem;
+    --f48: 4.8rem;
+    --f50: 5rem;
+    --f60: 5rem;
+    --f72: 7.2rem;
+    --f80: 8rem;
+    --f120: 12rem;
+    --f160: 16rem;
+    --f200: 20rem;
+  }
+}
+/* ABAIXO DE 800PX */
+
+@media (max-width: 800px) {
+  :root {
+    --t04: 0.2rem;
+    --t08: 0.4rem;
+    --t12: 0.6rem;
+    --t16: 0.8rem;
+    --t18: 1rem;
+    --t20: 1.2rem;
+    --t24: 1.6rem;
+    --t32: 1.8rem;
+    --t36: 2rem;
+    --t40: 2.4rem;
+    --t48: 2.5rem;
+    --t50: 2.7rem;
+    --t60: 3rem;
+    --t72: 3.6rem;
+    --t80: 4rem;
+    --t120: 6rem;
+    --t160: 8rem;
+    --t200: 10rem;
+
+    /* FONTES */
+    --f04: 0.4rem;
+    --f08: 0.8rem;
+    --f12: 1.2rem;
+    --f16: 1.6rem;
+    --f18: 1.8rem;
+    --f20: 1.8rem;
+    --f24: 2rem;
+    --f32: 2.2rem;
+    --f36: 3rem;
+    --f40: 3.2rem;
+    --f48: 4rem;
+    --f50: 4.2rem;
+    --f60: 5rem;
+    --f72: 6.2rem;
+    --f80: 7rem;
+    --f120: 10rem;
+    --f160: 14rem;
+    --f200: 18rem;
+  }
+}
+
+@media (max-width: 450px) {
+  :root {
+    /* MARGINS E PADDINGS */
+    --t04: 0.2rem;
+    --t08: 0.4rem;
+    --t12: 0.6rem;
+    --t16: 0.8rem;
+    --t18: 0.9rem;
+    --t20: 1rem;
+    --t24: 1.1rem;
+    --t32: 1.4rem;
+    --t36: 1.6rem;
+    --t40: 1.8rem;
+    --t48: 2rem;
+    --t50: 2.2rem;
+    --t60: 2.3rem;
+    --t72: 3.2rem;
+    --t80: 3.8rem;
+    --t120: 4.4rem;
+    --t160: 5.3rem;
+    --t200: 8rem;
+
+    /* FONTES */
+    --f04: 0.4rem;
+    --f08: 0.8rem;
+    --f12: 1.2rem;
+    --f16: 1.6rem;
+    --f18: 1.6rem;
+    --f20: 1.6rem;
+    --f24: 2rem;
+    --f32: 2rem;
+    --f36: 2.8rem;
+    --f40: 3rem;
+    --f48: 3.8rem;
+    --f50: 4rem;
+    --f60: 5rem;
+    --f72: 5.8rem;
+    --f80: 6.8rem;
+    --f120: 9.8rem;
+    --f160: 13.8rem;
+    --f200: 19.8rem;
+  }
+}
+
+@media (max-width: 450px) {
+  :root {
+    --f48: 3rem;
+  }
+}
