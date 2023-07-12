@@ -1,0 +1,192 @@
+.header {
+  display: none;
+}
+
+@media (max-width: 920px) {
+  .logo {
+    display: block;
+    z-index: 3;
+  }
+  /* Links do Menu */
+  .menu a {
+    display: block;
+    color: rgb(255, 255, 255);
+    padding: 2rem 0;
+    margin: 0 1rem;
+    border-top: 2px solid rgba(0, 0, 0, 0.05);
+    font-size: var(--f24);
+  }
+  /* Ficar branco quando passar o dedo no botão */
+  .menu a:hover {
+    color: rgb(206, 206, 206);
+  }
+
+  /* Menu  */
+  #menu {
+    display: block;
+    position: absolute;
+    width: 100%;
+    top: 85px;
+    right: 0;
+    background-color: var(--cor-m8);
+    height: 0;
+    transition: 0.6s;
+    z-index: 1000;
+    visibility: hidden;
+    overflow-y: hidden;
+  }
+
+  /* Quando o menu estiver ativo */
+  #nav.active #menu {
+    height: calc(100vh - 85px);
+    visibility: visible;
+    overflow-y: auto;
+  }
+
+  /*  A Estilização do Header geral */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 2rem;
+    z-index: 1000;
+    background-color: var(--cor-p2);
+  }
+
+  /* Lista de menu geral */
+  .menu-lista {
+    display: flex;
+    gap: 2rem;
+    display: none;
+  }
+
+  /* Adiciona um paddin para afastar os links do topo do header */
+  .menu-lista li:first-child {
+    padding-top: 30px;
+  }
+
+  .menu.active .menu-lista {
+    display: flex;
+  }
+
+  /* Lista com os Sub-menu */
+  .sub-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  /* Estilização do Botão do Menu */
+  /* ------------------------------------------------------- */
+  #btn-mobile {
+    display: flex;
+    padding: 1rem 1rem;
+    font-size: 1rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+    gap: 0.5rem;
+  }
+
+  #hamburger {
+    width: 25px;
+    border-top: 3px solid var(--cor-a12);
+  }
+  #hamburger::after,
+  #hamburger::before {
+    content: "";
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: currentColor;
+    margin-top: 5px;
+    transition: 0.3s;
+    position: relative;
+  }
+
+  .menu.active #hamburger {
+    border-top-color: transparent;
+  }
+  .menu.active #hamburger::before {
+    transform: rotate(135deg);
+  }
+  .menu.active #hamburger::after {
+    transform: rotate(-135deg);
+    top: -8px;
+  }
+
+  /* SUB-MENU */
+
+  .sub-menu {
+    opacity: 0;
+    display: block;
+    width: 100%;
+    height: 0;
+    transition: 0.1s;
+    visibility: hidden;
+    overflow-y: hidden;
+  }
+
+  .btn-sub.sub-active + .sub-menu {
+    opacity: 1;
+    visibility: visible;
+    height: max-content;
+    overflow-y: auto;
+  }
+
+  .sub-menu li {
+    margin-left: 5rem;
+  }
+  .sub-menu li:first-child {
+    padding-top: 0;
+  }
+
+  .sub-menu a {
+    border-top: none;
+    padding: 1rem 0;
+    font-size: 1.6rem;
+    position: relative;
+  }
+  .sub-menu a::before {
+    content: "";
+    width: 5px;
+    height: 5px;
+    background-color: var(--cor-p3);
+    display: inline-block;
+    position: absolute;
+    top: 17px;
+    left: -15px;
+    transition: 0.3s;
+    border-radius: 5px;
+  }
+  .sub-menu a:hover::before {
+    width: 10px;
+  }
+
+  .icons {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    margin-left: 2rem;
+    gap: 0.5rem;
+  }
+  .icons img {
+    max-width: 20px;
+    display: block;
+  }
+  .icons span {
+    position: absolute;
+    top: 2.7rem;
+    right: 3rem;
+    transform: rotate(180deg);
+    transition: 0.3s;
+  }
+
+  .btn-sub a {
+    position: relative;
+  }
+
+  .btn-sub.sub-active .seta {
+    transform: rotate(0);
+  }
+}

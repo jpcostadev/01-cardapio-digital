@@ -10,15 +10,110 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
     <title>Cardápio Online</title>
+    <script>document.documentElement.classList.add('js')</script>
 </head>
 
 <body>
-    <h1 class="font-1-xx">Cardápio Online</h1>
-    <p class="font-1-xl">Cardápio Online</p>
-    <p class="font-1-m">Cardápio Online</p>
-    <p class="font-2-xxl">Cardápio Online</p>
-    <p class="font-2-xx">Cardápio Online</p>
-    <p class="font-2-m">Cardápio Online</p>
+    <div class="grid-geral">
+        <header class="header">
+
+            <a class="logo" href=""><img src="./assets/img/logo-2.png" alt=""></a>
+
+            <nav class="menu" id="nav">
+
+                <button id="btn-mobile" aria-expanded="false" aria-controls="menu" aria-haspopup="true" aria-label="abrir menu">
+                    <span id="hamburger"></span>
+                </button>
+
+                <ul class="menu-lista" id="menu" role="menu">
+                    <li>
+                        <div class="icons btn-sub sanduiche">
+                            <img src="./assets/img/icons/Sanduíche.png" alt="">
+                            <a class="" href="#">Sanduíches <span class="seta"><img src="./assets/img/icons/seta-abrir.svg" alt=""></span></a>
+
+                        </div>
+                        <ul class="sub-menu" role="sub-menu">
+                            <li><a href="#">Combos</a></li>
+                            <li><a href="#">Carne</a></li>
+                            <li><a href="#">Frango</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <div class="icons btn-sub hotdog">
+                            <img src="./assets/img/icons/hotdog.png" alt="">
+                            <a href="#">Hotdogs <span class="seta"><img src="./assets/img/icons/seta-abrir.svg" alt=""></span></a>
+                        </div>
+                        <ul class="sub-menu" role="sub-menu">
+                            <li><a href="#">Hotdog1</a></li>
+                            <li><a href="#">Hotdog2</a></li>
+                            <li><a href="#">Hotdog3</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <div class="icons btn-sub hotdog">
+                            <img src="./assets/img/icons/Donuts.png" alt="">
+                            <a href="#">Doces <span class="seta"><img src="./assets/img/icons/seta-abrir.svg" alt=""></span></a>
+                        </div>
+                        <ul class="sub-menu" role="sub-menu">
+                            <li><a href="#">Doce1</a></li>
+                            <li><a href="#">Doce2</a></li>
+                            <li><a href="#">Doce3</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <div class="icons btn-sub hotdog">
+                            <img src="./assets/img/icons/Suco.png" alt="">
+                            <a href="#">Bebidas <span class="seta"><img src="./assets/img/icons/seta-abrir.svg" alt=""></span></a>
+                        </div>
+
+                        <ul class="sub-menu" role="sub-menu">
+                            <li><a href="#">Bebida1</a></li>
+                            <li><a href="#">Bebida2</a></li>
+                            <li><a href="#">Bebida3</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+
+        <div class="intro-info-desktop" aria-label="introdução do site">
+            <img class="foto-intro" src="./assets/img/Logo-maior.png" alt="">
+            <h1 class="font-1-xx cor-a1">Abra este este aplicativo em um <span>dispositivo móvel</span></h1>
+        </div>
+
+        <main class="intro-info">
+            <div>
+
+            </div>
+        </main>
+
+
+    </div>
+
+    <footer class="menu-footer">
+        <div class="grid-menu">
+            <ul>
+                <li>
+                    <a href="#"><img src="./assets/img/icons/Sanduíche.png" alt=""></a>
+                </li>
+                <li>
+                    <a href="#"><img src="./assets/img/icons/hotdog.png" alt=""></a>
+                </li>
+                <li>
+                    <a href="#"><img src="./assets/img/icons/Donuts.png" alt=""></a>
+                </li>
+                <li>
+                    <a href="#"><img src="./assets/img/icons/Suco.png" alt=""></a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+    <script src="./assets/js/menu.js"></script>
+    <script src="./assets/js/script.js"></script>
 
 </body>
 

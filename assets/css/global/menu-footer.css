@@ -1,0 +1,21 @@
+.footer-menu {
+  display: none;
+}
+
+.grid-menu ul {
+  display: none;
+}
+
+@media (max-width: 920px) {
+  .menu-footer {
+    background-color: var(--cor-a1);
+    align-self: end;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+  }
+
+  .grid-menu ul {
+    display: flex;
+  }
+}

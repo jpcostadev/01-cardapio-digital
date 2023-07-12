@@ -1,0 +1,24 @@
+.foto-intro {
+  max-width: 500px;
+  align-self: center;
+  padding-top: var(--t120);
+}
+
+.intro-info-desktop span {
+  color: var(--laranja);
+}
+.intro-info-desktop {
+  display: grid;
+  justify-items: center;
+}
+.intro-info-desktop h1 {
+  padding: 0 3rem;
+  text-align: center;
+  padding-top: 3rem;
+}
+
+@media (max-width: 920px) {
+  .intro-info-desktop {
+    display: none;
+  }
+}
