@@ -1,21 +1,63 @@
+/* Oculta o elemento com a classe ".footer-menu" */
 .footer-menu {
   display: none;
 }
 
+/* Oculta todas as listas não ordenadas dentro de elementos com a classe ".grid-menu" */
 .grid-menu ul {
   display: none;
 }
 
+/* Estilos aplicados quando a largura da janela é menor ou igual a 920px */
 @media (max-width: 920px) {
+  /* Estilos para o menu do rodapé */
   .menu-footer {
-    background-color: var(--cor-a1);
-    align-self: end;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
+    background-color: var(
+      --cor-a11
+    ); /* Define a cor de fundo do menu do rodapé */
+    align-self: end; /* Alinha o menu do rodapé à extremidade inferior */
+    position: fixed; /* Posiciona o menu do rodapé de forma fixa */
+    width: 100%; /* Define a largura do menu do rodapé como 100% */
+    bottom: 0; /* Alinha o menu do rodapé na parte inferior da janela */
   }
 
+  /* Estilos para as listas não ordenadas dentro do ".grid-menu" */
   .grid-menu ul {
-    display: flex;
+    display: flex; /* Exibe as listas não ordenadas como um flex container */
+    justify-content: space-between; /* Distribui o espaço disponível igualmente entre os elementos filhos */
+    padding: 1rem 2rem; /* Define um preenchimento de 1rem no topo e na base, e 2rem nas laterais */
+    gap: 2rem; /* Define um espaçamento de 2rem entre os elementos filhos */
+  }
+
+  /* Estilos para as imagens dentro das listas de itens */
+  .grid-menu ul img {
+    max-width: 40px; /* Define a largura máxima das imagens como 40px */
+    padding: 5px 10px; /* Define um preenchimento interno de 5px no topo e na base, e 10px nas laterais */
+  }
+
+  /* Estilos para os itens da lista */
+  .grid-menu li {
+    width: 100px; /* Define a largura dos itens como 100px */
+    display: flex; /* Exibe os itens como um flex container */
+    justify-content: center; /* Centraliza horizontalmente os elementos filhos */
+    transition: 0.3s; /* Aplica uma transição de 0.3s para suavizar as mudanças de estilo */
+    flex-direction: column; /* Define a direção dos elementos filhos como coluna */
+    align-items: center; /* Centraliza verticalmente os elementos filhos */
+  }
+
+  /* Estilos para os parágrafos dentro dos itens da lista */
+  .grid-menu li p {
+    color: var(
+      --cor-a1
+    ); /* Define a cor do texto como a cor especificada na variável "--cor-a1" */
+    font-size: 1.3rem; /* Define o tamanho da fonte como 1.3rem */
+  }
+
+  /* Estilos para os itens da lista quando são ativados (clique ou toque) */
+  .grid-menu li:active {
+    background-color: var(
+      --cor-p3
+    ); /* Define a cor de fundo quando o item é ativado */
+    border-radius: 5px; /* Define um raio de borda de 5px para arredondar as bordas */
   }
 }

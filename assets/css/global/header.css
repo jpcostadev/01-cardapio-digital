@@ -13,12 +13,14 @@
     color: rgb(255, 255, 255);
     padding: 2rem 0;
     margin: 0 1rem;
-    border-top: 2px solid rgba(0, 0, 0, 0.05);
+    border-bottom: 2px solid rgba(0, 0, 0, 0.02);
     font-size: var(--f24);
+    transition: 0.3s;
   }
-  /* Ficar branco quando passar o dedo no botão */
+
+  /* Ficar laranja quando passar o dedo no botão */
   .menu a:hover {
-    color: rgb(206, 206, 206);
+    color: var(--cor-p3);
   }
 
   /* Menu  */
@@ -26,9 +28,9 @@
     display: block;
     position: absolute;
     width: 100%;
-    top: 85px;
+    top: 70px;
     right: 0;
-    background-color: var(--cor-m8);
+    background-color: var(--cor-a1);
     height: 0;
     transition: 0.6s;
     z-index: 1000;
@@ -38,7 +40,7 @@
 
   /* Quando o menu estiver ativo */
   #nav.active #menu {
-    height: calc(100vh - 85px);
+    height: calc(100vh - 70px);
     visibility: visible;
     overflow-y: auto;
   }
@@ -50,7 +52,7 @@
     align-items: center;
     padding: 1.2rem 2rem;
     z-index: 1000;
-    background-color: var(--cor-p2);
+    background-color: var(--laranja);
   }
 
   /* Lista de menu geral */
@@ -90,7 +92,7 @@
 
   #hamburger {
     width: 25px;
-    border-top: 3px solid var(--cor-a12);
+    border-top: 3px solid var(--cor-a1);
   }
   #hamburger::after,
   #hamburger::before {
@@ -98,7 +100,7 @@
     display: block;
     width: 25px;
     height: 3px;
-    background: currentColor;
+    background: var(--cor-a1);
     margin-top: 5px;
     transition: 0.3s;
     position: relative;
@@ -144,8 +146,10 @@
   .sub-menu a {
     border-top: none;
     padding: 1rem 0;
-    font-size: 1.6rem;
+    font-size: 1.7rem;
     position: relative;
+    color: var(--cor-m5);
+    font-weight: 500;
   }
   .sub-menu a::before {
     content: "";
@@ -158,6 +162,12 @@
     left: -15px;
     transition: 0.3s;
     border-radius: 5px;
+  }
+
+  .btn-sub a {
+    position: relative;
+    color: var(--cor-m5);
+    font-weight: 500;
   }
   .sub-menu a:hover::before {
     width: 10px;
@@ -180,10 +190,6 @@
     right: 3rem;
     transform: rotate(180deg);
     transition: 0.3s;
-  }
-
-  .btn-sub a {
-    position: relative;
   }
 
   .btn-sub.sub-active .seta {

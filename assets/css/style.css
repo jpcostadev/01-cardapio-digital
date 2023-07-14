@@ -12,3 +12,6 @@
 
 /* Intro */
 @import url(./intro/intro.css);
+
+/* Configurações */
+@import url(./config/config.css);

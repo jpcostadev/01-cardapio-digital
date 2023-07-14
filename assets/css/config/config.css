@@ -1,0 +1,67 @@
+.idiomas {
+  display: grid;
+  justify-items: center;
+}
+
+/* Define o estilo do container do idioma */
+.grid-idioma {
+  display: grid;
+  background-color: rgba(78, 78, 78, 0.5);
+  border-radius: 60px;
+  padding: 0.1rem;
+}
+
+/* Define o estilo do container do idioma ativo */
+.grid-idioma.active {
+  padding: 1rem;
+  border-radius: 30px;
+}
+
+/* Define o estilo do link do idioma */
+.grid-idioma a {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 60px;
+}
+
+/* Define o estilo dos elementos dos idiomas */
+.idioma-pt,
+.idioma-es,
+.idioma-en {
+  display: block;
+  align-items: center;
+  display: none;
+}
+
+/* Define o estilo dos elementos dos idiomas ativos quando o container do idioma estiver ativo */
+.grid-idioma.active .idioma-pt,
+.grid-idioma.active .idioma-es,
+.grid-idioma.active .idioma-en {
+  display: block;
+}
+
+/* Define o estilo do idioma ativo "espanhol" */
+.idioma-es.active {
+  display: flex;
+  border-radius: 60px;
+}
+
+/* Define o estilo do idioma ativo "inglês" */
+.idioma-en.active {
+  display: flex;
+  border-radius: 60px;
+}
+
+/* Define o estilo do idioma ativo "português" */
+.idioma-pt.active {
+  display: flex;
+  border-radius: 60px;
+}
+
+/* Define quais elementos devem ser ocultados quando o idioma ativo for "espanhol" */
+.idioma-es.active .idioma-en,
+.idioma-es.active .idioma-pt {
+  display: none;
+}

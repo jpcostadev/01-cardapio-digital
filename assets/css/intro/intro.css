@@ -1,24 +1,32 @@
-.foto-intro {
+.foto-desktop {
   max-width: 500px;
   align-self: center;
   padding-top: var(--t120);
 }
 
-.intro-info-desktop span {
+.desktop span {
   color: var(--laranja);
 }
-.intro-info-desktop {
+.desktop {
   display: grid;
   justify-items: center;
 }
-.intro-info-desktop h1 {
+.desktop h1 {
   padding: 0 3rem;
   text-align: center;
   padding-top: 3rem;
 }
 
+.content-mobile {
+  display: none;
+}
+
 @media (max-width: 920px) {
-  .intro-info-desktop {
+  .desktop {
     display: none;
+  }
+
+  .content-mobile {
+    display: grid;
   }
 }
