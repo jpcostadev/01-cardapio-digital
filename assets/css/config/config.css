@@ -9,6 +9,7 @@
   background-color: rgba(78, 78, 78, 0.5);
   border-radius: 60px;
   padding: 0.1rem;
+  gap: 1rem;
 }
 
 /* Define o estilo do container do idioma ativo */
@@ -22,8 +23,33 @@
   display: flex;
   align-items: center;
   gap: 1rem;
-  padding: 1rem;
+  padding: 0.5rem 1rem;
   border-radius: 60px;
+}
+
+.grid-idioma span {
+  transition: 0.3s;
+}
+
+.idioma-pt span,
+.idioma-en span,
+.idioma-es span {
+  display: none;
+  transform: rotate(-180deg);
+}
+
+.grid-idioma a:hover span {
+  transform: rotate(-90deg);
+}
+
+.grid-idioma a:focus span {
+  transform: rotate(-90deg);
+}
+
+.idioma-pt.active span,
+.idioma-en.active span,
+.idioma-es.active span {
+  display: block;
 }
 
 /* Define o estilo dos elementos dos idiomas */
@@ -64,4 +90,8 @@
 .idioma-es.active .idioma-en,
 .idioma-es.active .idioma-pt {
   display: none;
+}
+
+.bandeiras {
+  max-width: 30px;
 }
