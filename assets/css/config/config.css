@@ -7,15 +7,21 @@
 .grid-idioma {
   display: grid;
   background-color: rgba(78, 78, 78, 0.5);
-  border-radius: 60px;
+  border-radius: 40px;
   padding: 0.1rem;
   gap: 1rem;
+  transition: 0.4s;
 }
 
 /* Define o estilo do container do idioma ativo */
 .grid-idioma.active {
   padding: 1rem;
   border-radius: 30px;
+}
+
+/* Faz com que suma o idioma padrão quando clicado o outro */
+.grid-idioma.active .idioma-padrao {
+  display: none;
 }
 
 /* Define o estilo do link do idioma */
@@ -37,12 +43,10 @@
   display: none;
   transform: rotate(-180deg);
 }
-
-.grid-idioma a:hover span {
-  transform: rotate(-90deg);
+.selecionar-idioma span {
+  transform: rotate(-180deg);
 }
-
-.grid-idioma a:focus span {
+.grid-idioma.active .seta span {
   transform: rotate(-90deg);
 }
 
@@ -50,6 +54,12 @@
 .idioma-en.active span,
 .idioma-es.active span {
   display: block;
+}
+
+.idioma-pt.active,
+.idioma-en.active,
+.idioma-es.active .selecionar-idioma {
+  display: none;
 }
 
 /* Define o estilo dos elementos dos idiomas */
@@ -94,4 +104,14 @@
 
 .bandeiras {
   max-width: 30px;
+}
+
+.selecionar-idioma.active {
+  display: none;
+}
+
+.idioma-pt.active,
+.idioma-es.active,
+.idioma-en.active.selecionar-idioma {
+  display: none;
 }

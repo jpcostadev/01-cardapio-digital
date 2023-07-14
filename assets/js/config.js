@@ -46,6 +46,12 @@ function aplicarIdioma(idioma) {
   // Move o idioma clicado para o topo da lista
   const listaIdiomas = idiomaClicado.parentNode;
   listaIdiomas.insertBefore(idiomaClicado, listaIdiomas.firstChild);
+
+  // Obtém o idioma selecionado
+  const idiomaSelecionado = idiomaClicado.dataset.lang;
+
+  // Armazena o idioma selecionado no armazenamento local
+  localStorage.setItem("idiomaSelecionado", idiomaSelecionado);
 }
 
 function handleTouchStart(event) {
@@ -57,5 +63,19 @@ idiomas.forEach((element) => {
   element.addEventListener("click", aplicarIdioma);
   element.addEventListener("touchstart", handleTouchStart);
 });
+
+const selecioneIdioma = document.querySelector(".selecionar-idioma");
+
+function sumirBotao() {
+  if (
+    gridIdiomas.classList.contains("active") &&
+    idiomas.classList.contains("active")
+  ) {
+    selecioneIdioma.classList.remove("active");
+  }
+}
+
+selecioneIdioma.addEventListener("click", sumirBotao);
+console.log(selecioneIdioma);
 
 // ______________ TRADUÇÃO DO SITE  ____________//
