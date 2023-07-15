@@ -1,17 +1,23 @@
-// // Gera uma string com a data e hora atual
-// const timestamp = new Date().getTime();
+window.addEventListener("load", function () {
+  // Verifica se o navegador suporta o recurso de limpar o cache
+  if ("caches" in window) {
+    // Limpa o cache atualizado
+    caches.keys().then(function (cacheNames) {
+      cacheNames.forEach(function (cacheName) {
+        caches.delete(cacheName);
+      });
+    });
+  }
+});
 
-// // Limpa o cache adicionando um parâmetro de consulta com a data e hora atual aos arquivos CSS e JavaScript
-// const links = document.getElementsByTagName("link");
-// for (let i = 0; i < links.length; i++) {
-//   if (links[i].getAttribute("rel") === "stylesheet") {
-//     const href = links[i].getAttribute("href");
-//     links[i].setAttribute("href", `${href}?v=${timestamp}`);
-//   }
-// }
+// Gera um número de versão exclusivo para ser usado como parâmetro de consulta
+// Gere um número de versão exclusivo com base na data e hora atual
+const versao = new Date().getTime();
 
-// const scripts = document.getElementsByTagName("script");
-// for (let i = 0; i < scripts.length; i++) {
-//   const src = scripts[i].getAttribute("src");
-//   scripts[i].setAttribute("src", `${src}?v=${timestamp}`);
-// }
+// Atualize os URLs dos arquivos estáticos com o parâmetro de versão
+const cssUrl = `./assets/css/style.css?v=${versao}`;
+const jsUrl = `./assets/js/script.js?v=${versao}`;
+
+// Use os URLs atualizados nos elementos HTML correspondentes
+document.querySelector("link[href='./assets/css/style.css']").href = cssUrl;
+document.querySelector("script[src='./assets/js/script.js']").src = jsUrl;

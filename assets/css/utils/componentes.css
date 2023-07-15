@@ -4,11 +4,18 @@
   padding: 0 2rem;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 920px) {
   .botao {
     padding: 12px 24px;
     gap: 6px;
     font-size: 1.3rem;
     line-height: 1.3rem;
+  }
+  .botao-comprar {
+    color: var(--branco);
+    font-weight: 500;
+    background-color: var(--laranja);
+    padding: 10px 15px;
+    border-radius: 5px;
   }
 }

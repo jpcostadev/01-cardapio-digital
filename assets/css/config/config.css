@@ -43,9 +43,7 @@
   display: none;
   transform: rotate(-180deg);
 }
-.selecionar-idioma span {
-  transform: rotate(-180deg);
-}
+
 .grid-idioma.active .seta span {
   transform: rotate(-90deg);
 }
@@ -112,6 +110,12 @@
 
 .idioma-pt.active,
 .idioma-es.active,
-.idioma-en.active.selecionar-idioma {
-  display: none;
+.idioma-en.active,
+.padrao {
+  display: flex;
+  border-radius: 60px;
+}
+
+.padrao span {
+  display: block;
 }

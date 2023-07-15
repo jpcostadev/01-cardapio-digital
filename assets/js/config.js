@@ -64,18 +64,28 @@ idiomas.forEach((element) => {
   element.addEventListener("touchstart", handleTouchStart);
 });
 
-const selecioneIdioma = document.querySelector(".selecionar-idioma");
+// ______________ REMOVER CLASSE PADRÃO  ____________//
 
-function sumirBotao() {
-  if (
-    gridIdiomas.classList.contains("active") &&
-    idiomas.classList.contains("active")
-  ) {
-    selecioneIdioma.classList.remove("active");
-  }
-}
+let padrao; // Variável para armazenar a referência ao elemento com classe "padrao"
 
-selecioneIdioma.addEventListener("click", sumirBotao);
-console.log(selecioneIdioma);
+document.addEventListener("DOMContentLoaded", () => {
+  padrao = document.querySelector(".padrao"); // Atribui o elemento com classe "padrao" à variável padrao quando o DOM for carregado
+});
+
+idiomas.forEach((idioma) => {
+  idioma.addEventListener("click", () => {
+    if (padrao) {
+      padrao.classList.remove("padrao"); // Remove a classe "padrao" se a variável padrao estiver definida
+    }
+  });
+
+  idioma.addEventListener("touchstart", () => {
+    if (padrao) {
+      padrao.classList.remove("padrao"); // Remove a classe "padrao" se a variável padrao estiver definida
+    }
+  });
+});
+
+console.log(padrao);
 
 // ______________ TRADUÇÃO DO SITE  ____________//

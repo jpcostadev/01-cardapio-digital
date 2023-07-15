@@ -19,6 +19,7 @@
     position: fixed; /* Posiciona o menu do rodapé de forma fixa */
     width: 100%; /* Define a largura do menu do rodapé como 100% */
     bottom: 0; /* Alinha o menu do rodapé na parte inferior da janela */
+    z-index: 1000;
   }
 
   /* Estilos para as listas não ordenadas dentro do ".grid-menu" */

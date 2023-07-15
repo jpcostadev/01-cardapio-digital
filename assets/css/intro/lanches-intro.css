@@ -1,0 +1,40 @@
+@media (max-width: 920px) {
+  .lanches-intro {
+    display: grid;
+    padding-top: 6rem;
+    padding: 2rem 2rem 2rem 2rem;
+  }
+
+  .lanches-intro ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    position: relative;
+    overflow-y: auto;
+    z-index: -1;
+  }
+  .lanches-intro li {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    background-color: var(--cor-m9);
+    border-radius: 5px;
+    padding: 2rem;
+  }
+  .lanches-intro a {
+    color: var();
+  }
+  .lanches-intro span {
+    margin-bottom: 0.5rem;
+  }
+  .lanches-intro img {
+    max-width: 100px;
+    margin-bottom: 1rem;
+  }
+
+  .content-mobile {
+    display: grid;
+    margin-top: 70px;
+    margin-bottom: 60px;
+  }
+}

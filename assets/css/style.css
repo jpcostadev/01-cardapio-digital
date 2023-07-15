@@ -12,6 +12,7 @@
 
 /* Intro */
 @import url(./intro/intro.css);
+@import url(./intro/lanches-intro.css);
 
 /* Configurações */
 @import url(./config/config.css);
