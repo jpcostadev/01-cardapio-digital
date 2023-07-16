@@ -123,3 +123,36 @@
 .off {
   display: none;
 }
+
+.pt,
+.en,
+.es {
+  display: none;
+}
+
+.pt.active,
+.en.active,
+.es.active {
+  display: block;
+}
+
+.btn-sub .pt,
+.btn-sub .en,
+.btn-sub .es {
+  display: none;
+}
+.btn-sub .pt.active,
+.btn-sub .en.active,
+.btn-sub .es.active {
+  display: block;
+}
+.sub-menu .pt,
+.sub-menu .en,
+.sub-menu .es {
+  display: none;
+}
+.sub-menu .pt.active,
+.sub-menu .en.active,
+.sub-menu .es.active {
+  display: block;
+}

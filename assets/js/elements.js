@@ -27,10 +27,27 @@ function sumirElemento(event) {
     main.classList.remove("off");
     configGeral.classList.add("off");
   }
-
-  console.log(clicado);
 }
 
 botoesRodape.forEach((botao) => {
   botao.addEventListener("click", sumirElemento);
+});
+
+//__________Ativa os itens do menu_______//
+
+const itensMenu = document.querySelectorAll(".btn-sub a");
+const itensSubMenu = document.querySelectorAll(".sub-menu a");
+
+function ativarItensMenu(event) {
+  const selecionado = event.currentTarget;
+  if (!selecionado.classList.contains("active")) {
+    itensMenu.forEach((item) => {
+      item.classList.remove("active");
+    });
+    item.classList.add("active");
+  }
+}
+
+itensMenu.forEach((item) => {
+  item.addEventListener("click", ativarItensMenu);
 });
