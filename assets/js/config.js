@@ -1,6 +1,5 @@
 // Função que abre o menu de idiomas quando for clicado
 const gridIdiomas = document.querySelector(".js-grid-idioma");
-
 function listarIdiomas(event) {
   const clicado = event.pointerType;
 
@@ -86,6 +85,22 @@ idiomas.forEach((idioma) => {
   });
 });
 
-console.log(padrao);
+// ______________ Selecionar os botões do footer  ____________//
 
-// ______________ TRADUÇÃO DO SITE  ____________//
+const botoes = document.querySelectorAll(".grid-menu li");
+
+function ativarMenu(event) {
+  const botaoClicado = event.currentTarget;
+  if (botaoClicado) {
+    botoes.forEach((ativo) => {
+      if (ativo.classList.contains("active")) {
+        ativo.classList.remove("active");
+      }
+    });
+  }
+  botaoClicado.classList.add("active");
+}
+
+botoes.forEach((botao) => {
+  botao.addEventListener("click", ativarMenu);
+});

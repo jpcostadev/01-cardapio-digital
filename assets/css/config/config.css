@@ -119,3 +119,7 @@
 .padrao span {
   display: block;
 }
+
+.off {
+  display: none;
+}

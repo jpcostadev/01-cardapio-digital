@@ -18,8 +18,8 @@
 </head>
 
 <body>
-    <div class="grid-geral">
-        <header class="header">
+    <div class="grid-geral" id="home">
+        <header class="header ">
 
             <a class="logo" href=""><img src="./assets/img/Logo.png" alt=""></a>
 
@@ -90,35 +90,9 @@
         </div>
 
 
-        <main class="content-mobile">
+        <main class="content-mobile main">
             <div class="lanches-intro">
                 <ul>
-                    <li>
-                        <img src="./assets/img/hamburger1.png" alt="">
-                        <h2>X-Picanha</h2>
-                        <span>$ 28</span>
-                        <a class="botao-comprar" href="#">ESCOLHER</a>
-
-                    </li>
-                    <li>
-                        <img src="./assets/img/hamburger2.png" alt="">
-                        <h2>X-Frango</h2>
-                        <span>$ 28</span>
-                        <a class="botao-comprar" href="#">ESCOLHER</a>
-                    </li>
-                    <li>
-                        <img src="./assets/img/hamburger1.png" alt="">
-                        <h2>X-Picanha</h2>
-                        <span>$ 28</span>
-                        <a class="botao-comprar" href="#">ESCOLHER</a>
-
-                    </li>
-                    <li>
-                        <img src="./assets/img/hamburger2.png" alt="">
-                        <h2>X-Frango</h2>
-                        <span>$ 28</span>
-                        <a class="botao-comprar" href="#">ESCOLHER</a>
-                    </li>
                     <li>
                         <img src="./assets/img/hamburger1.png" alt="">
                         <h2>X-Picanha</h2>
@@ -176,7 +150,41 @@
 
             </div>
         </main>
+    </div>
 
+
+    <div class="configuracoes content-mobile" id="config">
+        <div class="idiomas">
+            <p class="font-1-m cor-a3 idioma-titulo">Idiomas</p>
+
+            <div class="grid-idioma js-grid-idioma">
+
+                <section class="idioma-pt seta idioma padrao">
+                    <a href="#">
+                        <img class="bandeiras" src="./assets/img/icons/pt-br.png" alt="">
+                        <p class="font-1-m cor-a3">Português - BR</p>
+                        <span><img src="./assets/img/icons/seta-abrir.svg" alt=""></span>
+                    </a>
+                </section>
+
+                <section class="idioma-es seta idioma">
+                    <a href="#">
+                        <img class="bandeiras" src="./assets/img/icons/esp.png" alt="">
+                        <p class="font-1-m cor-a3">Espanhol - ES</p>
+                        <span><img src="./assets/img/icons/seta-abrir.svg" alt=""></span>
+                    </a>
+                </section>
+
+                <section class="idioma-en seta idioma">
+                    <a href="#">
+                        <img class="bandeiras" src="./assets/img/icons/eng.png" alt="">
+                        <p class="font-1-m cor-a3">Inglês - US</p>
+                        <span><img src="./assets/img/icons/seta-abrir.svg" alt=""></span>
+                    </a>
+                </section>
+
+            </div>
+        </div>
 
     </div>
 
@@ -184,19 +192,19 @@
         <div class="grid-menu">
             <ul>
                 <li class="home">
-                    <a href="./index.html"><img src="./assets/img/icons/home-4.svg" alt=""></a>
+                    <a href="#home"><img src="./assets/img/icons/home-4.svg" alt=""></a>
                     <p>Início</p>
                 </li>
-                <li>
+                <li class="pedidos">
                     <a href="#"><img src="./assets/img/icons/burger.svg" alt=""></a>
                     <p>Pedidos</p>
                 </li>
-                <li>
+                <li class="chat">
                     <a href="#"><img src="./assets/img/icons/chat.svg" alt=""></a>
                     <p>Chat</p>
                 </li>
-                <li>
-                    <a href="config.html"><img src="./assets/img/icons/cog.svg" alt=""></a>
+                <li class="config">
+                    <a href="#config"><img src="./assets/img/icons/cog.svg" alt=""></a>
                     <p>Config</p>
                 </li>
             </ul>
@@ -204,6 +212,8 @@
     </footer>
     <script src="./assets/js/menu.js"></script>
     <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/config.js"></script>
+    <script src="./assets/js/elements.js"></script>
 
 </body>
 
