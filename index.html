@@ -12,14 +12,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
     <title>Cardápio Online</title>
 
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
+
 
     <script>document.documentElement.classList.add('js')</script>
 </head>
 
 <body>
     <div class="grid-geral" id="home">
-        <header class="header ">
+        <header class="header elemento">
 
             <a class="logo" href="#home"><img src="./assets/img/Logo.png" alt=""></a>
 
@@ -131,7 +132,7 @@
             </nav>
         </header>
 
-        <!-- -------------------------------------------------- -->
+
 
 
         <!--  Parte que aparece no desktop em 3 idiomas diferentes -->
@@ -147,62 +148,35 @@
 
 
         <!-- Intro parte do catálogo que expõe os produtos selecionados -->
-        <main class="content-mobile main">
+        <main class="content-mobile main elemento">
             <div class="lanches-intro">
                 <ul>
                     <li>
                         <img src="./assets/img/hamburger1.png" alt="">
                         <h2>X-Picanha</h2>
                         <span>$ 28</span>
-                        <a class="botao-comprar" href="#">ESCOLHER</a>
+                        <a class="botao-comprar" href="#pedidos">DESATIVADO</a>
 
                     </li>
                     <li>
                         <img src="./assets/img/hamburger2.png" alt="">
                         <h2>X-Frango</h2>
                         <span>$ 28</span>
-                        <a class="botao-comprar" href="#">ESCOLHER</a>
+                        <a class="botao-comprar" href="#pedidos">DESATIVADO</a>
                     </li>
                     <li>
                         <img src="./assets/img/hamburger1.png" alt="">
                         <h2>X-Picanha</h2>
                         <span>$ 28</span>
-                        <a class="botao-comprar" href="#">ESCOLHER</a>
+                        <a class="botao-comprar" href="#pedidos">DESATIVADO</a>
 
                     </li>
                     <li>
                         <img src="./assets/img/hamburger2.png" alt="">
                         <h2>X-Frango</h2>
                         <span>$ 28</span>
-                        <a class="botao-comprar" href="#">ESCOLHER</a>
+                        <a class="botao-comprar" href="#pedidos">DESATIVADO</a>
                     </li>
-                    <li>
-                        <img src="./assets/img/hamburger1.png" alt="">
-                        <h2>X-Picanha</h2>
-                        <span>$ 28</span>
-                        <a class="botao-comprar" href="#">ESCOLHER</a>
-
-                    </li>
-                    <li>
-                        <img src="./assets/img/hamburger2.png" alt="">
-                        <h2>X-Frango</h2>
-                        <span>$ 28</span>
-                        <a class="botao-comprar" href="#">ESCOLHER</a>
-                    </li>
-                    <li>
-                        <img src="./assets/img/hamburger1.png" alt="">
-                        <h2>X-Picanha</h2>
-                        <span>$ 28</span>
-                        <a class="botao-comprar" href="#">ESCOLHER</a>
-
-                    </li>
-                    <li>
-                        <img src="./assets/img/hamburger2.png" alt="">
-                        <h2>X-Frango</h2>
-                        <span>$ 28</span>
-                        <a class="botao-comprar" href="#">ESCOLHER</a>
-                    </li>
-
                 </ul>
 
             </div>
@@ -215,7 +189,7 @@
 
     <!-- CONFIGURAÇÕES DE IDIOMA DO SITE -->
 
-    <div class="configuracoes content-mobile" id="config">
+    <div class="configuracoes content-mobile elemento" id="config">
         <div class="idiomas">
             <p class="font-1-m cor-a3 idioma-titulo pt">Idiomas</p>
             <p class="font-1-m cor-a3 idioma-titulo en">Languages</p>
@@ -255,8 +229,259 @@
     <!-- -------------------------------------------------- -->
 
 
-    <!-- CATÁLOGO DE PRODUTOS -->
+    <!-- PEDIDOS  -->
+    <section class="section-pedidos content-mobile elemento off" id="pedidos">
+        <form class="pedidos content-mobile" action="./enviar.php" method="post" id="form">
+            <div class="orcamento-produto">
 
+                <div class="dados-cliente">
+                    <h3 class="font-1-m">Cliente</h3>
+
+                    <label for="nome">Nome</label>
+                    <input type="text" placeholder="Seu Nome" name="nome" value="" id="nome">
+
+                    <label for="mesa">Mesa</label>
+                    <input type="text" placeholder="nº Mesa" name="mesa" value="" id="mesa">
+
+                    <label for="whatsapp">Whatsapp</label>
+                    <input type="text" placeholder="Whatsapp" name="whatsapp" value="" id="whatsapp">
+                </div>
+
+
+                <div class="pedidos-dados">
+                    <h3 class="font-1-m">Montar Pedido</h3>
+
+                    <h4 class="font-1-m">Categoria</h4>
+
+
+                    <div class="sanduiche-pg bg-pedidos">
+                        <!-- Categoria sanduíche -->
+                        <div class="titulo-categoria js-sanduiche">
+                            <input type="checkbox" name="categoria" value="Sanduíche" id="sanduiche">
+                            <label for="sanduiche">Sanduíches</label>
+                        </div>
+
+
+                        <!-- Conteúdo sanduíche -->
+                        <div class="sanduiche-conteudo off" id="sanuiche-conteudo">
+                            <ul>
+                                <h2 class="font-1-m cor-m9">Escolha o seu</h2>
+                                <div class="selecionar-sabor" data-target="x-burger">
+                                    <input type="checkbox" name="produto" value="sanduiche[X-BURGER]" id="x-burger">
+                                    <label for="x-burger">X-BURGER $18</label>
+                                </div>
+
+                                <li class="x-burger off">
+                                    <div class="ingredientes">
+                                        <img src="./assets/img/hamburger1.png" alt="">
+                                        <ul>
+                                            <li>- Pão</li>
+                                            <li>- Hambúrguer</li>
+                                            <li>- Mussarela</li>
+                                            <li>- Maionese</li>
+                                            <li>- Alface</li>
+                                            <li>- Tomate</li>
+                                            <li>- Milho</li>
+                                            <li>- Ervilha</li>
+                                            <li>- Batata Palha</li>
+                                        </ul>
+
+                                        <p>Quantidade:</p>
+                                        <input type="number" name="Qtd" placeholder="Qtd">
+
+                                        <p>Forma de Pagamento:</p>
+                                        <select name="pagamento" id="forma-pagamento">
+                                            <option value="pix">Pix</option>
+                                            <option value="cartao-credito">Cartão Crédito</option>
+                                            <option value="cartao-debito">Cartão Débito</option>
+                                            <option value="dinheiro">Dinheiro</option>
+                                        </select>
+
+                                        <button class="btn-adicionais sd" type="button" name="adicionais" value="adicionais" data-target="x-burgeradd">adicionais</button>
+
+                                        <div class="adicionais adicionais-sanduiche off" data-target="x-burgeradd">
+                                            <ul>
+                                                <li>
+                                                    <label for="bacon">+ Bacon</label>
+                                                    <select name="+bacon" id="bacon">
+                                                        <option value="1">1</option>
+                                                        <option value="2">2</option>
+                                                        <option value="3">3</option>
+                                                    </select>
+                                                </li>
+                                                <li>
+                                                    <label for="queijo">+ Queijo</label>
+                                                    <select name="+queijo" id="queijo">
+                                                        <option value="1">1</option>
+                                                        <option value="2">2</option>
+                                                        <option value="3">3</option>
+                                                    </select>
+                                                </li>
+                                                <li>
+                                                    <label for="carne">+ Carne</label>
+                                                    <select name="+carne" id="carne">
+                                                        <option value="1">1</option>
+                                                        <option value="2">2</option>
+                                                        <option value="3">3</option>
+                                                    </select>
+                                                </li>
+                                                <li>
+                                                    <label for="abacaxi">+ Abacaxi</label>
+                                                    <select name="+abacaxi" id="abacaxi">
+                                                        <option value="1">1</option>
+                                                        <option value="2">2</option>
+                                                        <option value="3">3</option>
+                                                    </select>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <button class="btn-enviar btn-pedir" type="submit" name="pedir" value="pedir" data-target="x-burger">Pedir</button>
+                                </li>
+
+
+
+
+
+                                <div class="selecionar-sabor" data-target="x-tudo">
+                                    <input type="checkbox" name="produto" value="sanduiche[X-TUDO]" id="x-tudo">
+                                    <label for="x-tudo">X-TUDO $28</label>
+                                </div>
+
+                                <li class="x-tudo off">
+                                    <div class="ingredientes">
+                                        <img src="./assets/img/hamburger2.png" alt="">
+                                        <ul>
+                                            <li>- Pão</li>
+                                            <li>- Hambúrguer</li>
+                                            <li>- Mussarela</li>
+                                            <li>- Maionese</li>
+                                            <li>- Alface</li>
+                                            <li>- Tomate</li>
+                                            <li>- Milho</li>
+                                            <li>- Ervilha</li>
+                                            <li>- Batata Palha</li>
+                                        </ul>
+
+                                        <p>Quantidade:</p>
+                                        <input type="number" name="Qtd" placeholder="Qtd">
+
+                                        <p>Forma de Pagamento:</p>
+                                        <select name="pagamento" id="forma-pagamento">
+                                            <option value="pix">Pix</option>
+                                            <option value="cartao-credito">Cartão Crédito</option>
+                                            <option value="cartao-debito">Cartão Débito</option>
+                                            <option value="dinheiro">Dinheiro</option>
+                                        </select>
+
+                                        <button class="btn-adicionais sd" type="button" name="adicionais" value="adicionais" data-target="x-burgeradd">adicionais</button>
+
+                                        <div class="adicionais adicionais-sanduiche off" data-target="x-burgeradd">
+                                            <ul>
+                                                <li>
+                                                    <label for="bacon">+ Bacon</label>
+                                                    <select name="+bacon" id="bacon">
+                                                        <option value="1">1</option>
+                                                        <option value="2">2</option>
+                                                        <option value="3">3</option>
+                                                    </select>
+                                                </li>
+                                                <li>
+                                                    <label for="queijo">+ Queijo</label>
+                                                    <select name="+queijo" id="queijo">
+                                                        <option value="1">1</option>
+                                                        <option value="2">2</option>
+                                                        <option value="3">3</option>
+                                                    </select>
+                                                </li>
+                                                <li>
+                                                    <label for="carne">+ Carne</label>
+                                                    <select name="+carne" id="carne">
+                                                        <option value="1">1</option>
+                                                        <option value="2">2</option>
+                                                        <option value="3">3</option>
+                                                    </select>
+                                                </li>
+                                                <li>
+                                                    <label for="abacaxi">+ Abacaxi</label>
+                                                    <select name="+abacaxi" id="abacaxi">
+                                                        <option value="1">1</option>
+                                                        <option value="2">2</option>
+                                                        <option value="3">3</option>
+                                                    </select>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <button class="btn-enviar btn-pedir" type="submit" name="pedir" value="pedir" data-target="x-burger">Pedir</button>
+                                </li>
+
+
+                            </ul>
+
+                        </div>
+
+                    </div>
+
+                    <div class="fritas-pg bg-pedidos">
+                        <!-- Categoria Fritas -->
+                        <div class="titulo-categoria js-sanduiche">
+                            <input type="checkbox" name="tipo" value="fritas" id="fritas">
+                            <label for="fritas">Fritas</label>
+                        </div>
+
+
+                        <!-- Conteúdo Fritas -->
+                        <div class="fritas-conteudo off" id="fritas-conteudo">
+                            <h2>Fritas</h2>
+                        </div>
+                    </div>
+
+
+                    <div class="hotdog-pg bg-pedidos">
+                        <!-- Categoria Hotdog -->
+                        <div class="titulo-categoria js-hotdog">
+                            <input type="checkbox" name="tipo" value="hotdog" id="hotdog">
+                            <label for="hotdog">Hotdog</label>
+                        </div>
+
+                        <!-- Conteúdo Hotdog -->
+
+                        <div class="hotdog-conteudo off" id="doces-conteudo">
+                            <h2>Hotdog</h2>
+                        </div>
+                    </div>
+
+                    <div class="doces-pg bg-pedidos">
+                        <!-- Categoria Doces -->
+                        <div class="titulo-categoria js-doces">
+                            <input type="checkbox" name="tipo" value="doces" id="doces">
+                            <label for="doces">Doces</label>
+                        </div>
+                        <!-- Conteúdo Doces -->
+
+                        <div class="doces-conteudo off" id="doces-conteudo">
+                            <h2>Doces</h2>
+                        </div>
+                    </div>
+
+
+                    <div class="bebidas-pg bg-pedidos">
+                        <!-- Categoria Bebidas -->
+                        <div class="titulo-categoria js-bebidas">
+                            <input type="checkbox" name="tipo" value="bebidas" id="bebidas">
+                            <label for="bebidas">Bebidas</label>
+                        </div>
+                        <!-- Conteúdo Bebidas -->
+
+                        <div class="bebidas-conteudo off" id="bebidas-conteudo">
+                            <h2>Bebidas</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </section>
 
     <!-- -------------------------------------------------- -->
 
@@ -272,13 +497,13 @@
                     <p class="en">Home</p>
                     <p class="es">Comenzar</p>
                 </li>
-                <li class="pedidos">
-                    <a href="#"><img src="./assets/img/icons/burger.svg" alt=""></a>
+                <li class="pedidos-btn">
+                    <a href="#pedidos"><img src="./assets/img/icons/burger.svg" alt=""></a>
                     <p class="pt">Pedidos</p>
                     <p class="en">Orders</p>
                     <p class="es">Peticiones</p>
                 </li>
-                <li class="chat">
+                <li class="#chat">
                     <a href="#"><img src="./assets/img/icons/chat.svg" alt=""></a>
                     <p class="pt">Chat</p>
                     <p class="en">Chat</p>
@@ -298,6 +523,7 @@
     <script src="./assets/js/config.js"></script>
     <script src="./assets/js/elements.js"></script>
     <script src="./assets/js/tradutor.js"></script>
+    <script src="./assets/js/pedidos.js"></script>
 
 
 </body>

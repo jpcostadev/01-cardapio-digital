@@ -1,0 +1,173 @@
+.pedidos {
+  display: grid;
+  padding: 0 2rem;
+}
+
+.dados-cliente {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 5rem;
+  margin-top: 1rem;
+  padding: 0 2rem;
+}
+
+/* Estilo do Formulário de pedidos */
+
+.pedidos label {
+  font-size: var(--f16);
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  display: block;
+  margin-bottom: var(--t04);
+}
+
+/*  para estilizar os inputs */
+.pedidos input[type="text"],
+.pedidos input[type="email"],
+.pedidos input[type="number"],
+.pedidos textarea {
+  font-size: var(--f16);
+  line-height: 1.5;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  background-color: var(--cor-a1);
+  border: 1px solid var(--cor-a2);
+  padding: var(--t12);
+  width: 100%;
+  border-radius: 0.5rem;
+}
+
+.pedidos input[type="text"]:focus,
+.pedidos input[type="email"]:focus,
+.pedidos input[type="number"]:focus,
+.pedidos textarea:focus {
+  outline: none;
+  border-color: var(--cor-p3);
+  background-color: var(--branco);
+  box-shadow: 0 0 0 2px var(--cor-p1);
+}
+
+/* Inputs dados de clientes */
+
+.dados-cliente input {
+  grid-column: 1/-1;
+}
+.dados-cliente label {
+  font-family: "Poppins", sans-serif;
+  margin-top: 1rem;
+}
+.dados-cliente h3 {
+  grid-column: 1/-1;
+  margin-bottom: 2rem;
+  text-align: center;
+  font-size: 2rem;
+}
+
+/* Categorias e seus conteudos */
+
+.sanduiche-pg,
+.fritas-pg,
+.hotdog-pg,
+.doces-pg,
+.bebidas-pg {
+  padding: 0 2rem;
+}
+
+.titulo-categoria {
+  display: flex;
+  gap: 1rem;
+}
+
+.pedidos-dados {
+  display: grid;
+  gap: 1rem;
+  padding: 0 2rem;
+}
+.pedidos-dados h3 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+.pedidos-dados h4 {
+  margin-bottom: 1rem;
+}
+
+.pedidos-dados label {
+  font-size: 2.5rem;
+  padding: 1rem;
+  color: var(--cor-m9);
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+}
+
+.bg-pedidos {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 5px;
+}
+
+.ingredientes {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+.ingredientes img {
+  max-width: 200px;
+}
+.ingredientes li {
+  margin-bottom: 1rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  color: var(--cor-m9);
+}
+
+.adicionais label {
+  font-size: 2rem;
+  padding: 1rem;
+  color: var(--cor-m9);
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+}
+.adicionais li {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--cor-a2);
+  border-radius: 5px;
+}
+.adicionais select {
+  box-shadow: none;
+  background-color: var(--cor-a2);
+}
+
+.section-pedidos .content-mobile {
+  margin-top: 0;
+}
+
+.selecionar-sabor {
+  display: flex;
+  align-items: center;
+}
+
+.btn-pedir {
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+.msg-enviada {
+  text-align: center;
+  font-size: 3rem;
+}
+
+.msg-enviada span {
+  color: green;
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+}
+.msg-nao-enviada {
+  text-align: center;
+  font-size: 3rem;
+}
+.msg-nao-enviada span {
+  color: red;
+  text-transform: uppercase;
+}

@@ -1,23 +1,38 @@
-window.addEventListener("load", function () {
-  // Verifica se o navegador suporta o recurso de limpar o cache
-  if ("caches" in window) {
-    // Limpa o cache atualizado
-    caches.keys().then(function (cacheNames) {
-      cacheNames.forEach(function (cacheName) {
-        caches.delete(cacheName);
-      });
-    });
-  }
-});
+// const formulario = document.getElementById("form");
+// const botao = document.querySelectorAll(".btn-pedir");
 
-// Gera um número de versão exclusivo para ser usado como parâmetro de consulta
-// Gere um número de versão exclusivo com base na data e hora atual
-const versao = new Date().getTime();
+// function formularioEnviado(resposta) {
+//   console.log(resposta);
+//   if (resposta.ok) {
+//     formulario.innerHTML =
+//       "<p class='msg-enviada'>Pedido Realizado com <span>sucesso1</span>, só aguardar!</p>";
+//   } else {
+//     formulario.innerHTML =
+//       " <p class='msg-nao-enviada'> <span>Erro</span> ao realizar o pedido, chame um atendente </p>";
+//   }
+// }
 
-// Atualize os URLs dos arquivos estáticos com o parâmetro de versão
-const cssUrl = `./assets/css/style.css?v=${versao}`;
-const jsUrl = `./assets/js/script.js?v=${versao}`;
+// function enviarFormulario(event) {
+//   event.preventDefault();
+//   const botaoClicado = event.submitter;
+//   const form = new FormData(formulario);
 
-// Use os URLs atualizados nos elementos HTML correspondentes
-document.querySelector("link[href='./assets/css/style.css']").href = cssUrl;
-document.querySelector("script[src='./assets/js/script.js']").src = jsUrl;
+//   const dados = {
+//     nome: form.get("nome"),
+//     mesa: form.get("mesa"),
+//     whatsapp: form.get("whatsapp"),
+//   };
+
+//   if (botaoClicado) {
+//     if (dados.nome === "" || dados.whatsapp === "" || dados.mesa === "") {
+//       alert("Preencha os campos Nome, Mesa, Whatsapp");
+//       return;
+//     } else if (dados.whatsapp.length < 7 || isNaN(dados.whatsapp)) {
+//       alert("Digite um número válido");
+//       return;
+//     }
+
+//   }
+// }
+
+// formulario.addEventListener("submit", enviarFormulario);

@@ -1,0 +1,52 @@
+.form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--t24);
+}
+
+/* espandir o formulário de ponta a ponta */
+.form .col-2 {
+  grid-column: span 2;
+}
+
+.form label {
+  font-size: var(--f16);
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  display: block;
+  margin-bottom: var(--t04);
+}
+
+/*  para estilizar os inputs */
+.form input[type="text"],
+.form input[type="email"],
+.form textarea {
+  font-size: var(--f16);
+  line-height: 1.5;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  background-color: var(--cor-a1);
+  border: 1px solid var(--cor-a2);
+  padding: var(--t12);
+  width: 100%;
+  border-radius: 0.5rem;
+}
+
+.form input[type="text"]:focus,
+.form input[type="email"]:focus,
+.form textarea:focus {
+  outline: none;
+  border-color: var(--cor-p3);
+  background-color: var(--branco);
+  box-shadow: 0 0 0 2px var(--cor-p1);
+}
+
+@media (max-width: 600px) {
+  .form {
+    grid-template-columns: 1fr;
+  }
+  .form .col-2 {
+    grid-column: 1;
+  }
+}

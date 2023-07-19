@@ -45,12 +45,6 @@ function aplicarIdioma(idioma) {
   // Move o idioma clicado para o topo da lista
   const listaIdiomas = idiomaClicado.parentNode;
   listaIdiomas.insertBefore(idiomaClicado, listaIdiomas.firstChild);
-
-  // Obtém o idioma selecionado
-  const idiomaSelecionado = idiomaClicado.dataset.lang;
-
-  // Armazena o idioma selecionado no armazenamento local
-  localStorage.setItem("idiomaSelecionado", idiomaSelecionado);
 }
 
 function handleTouchStart(event) {
