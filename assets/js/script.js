@@ -33,7 +33,6 @@ function enviarFormulario(event) {
     } // Aqui, vamos usar o fetch para enviar o formulário para o servidor
 
     fetch("./enviar.php", {
-Hide quoted text
       method: "POST",
       body: form,
     }).then(formularioEnviado);
